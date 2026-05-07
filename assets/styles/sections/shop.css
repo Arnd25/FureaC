@@ -12,14 +12,12 @@
     overflow: hidden; 
 }
 
-/* --- АДАПТИВ ДЛЯ КАРТИНОК --- */
 .shop__card-img {
     max-width: 100%;
     height: auto;
 }
 
 
-/* ---------------------------- */
 
 .shop__card--mega {
     grid-row: span 2;
