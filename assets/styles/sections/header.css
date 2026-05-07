@@ -1,6 +1,4 @@
-/* =========================================
-   HEADER TOP STYLES
-   ========================================= */
+
 
 .header__top {
     background: var(--primary-color);
@@ -16,7 +14,7 @@
 .header__top-text {
     color: var(--white-color);
     margin: 0;
-    font-size: 14px; /* Добавил размер шрифта для текста акции */
+    font-size: 14px; 
 }
 
 .header__top-controls {
@@ -24,7 +22,6 @@
     align-items: center;
 }
 
-/* --- Items & Separators --- */
 
 .header__top-item {
     position: relative;
@@ -37,7 +34,6 @@
     padding-right: 0;
 }
 
-/* Линия разделитель */
 .header__top-item::before {
     position: absolute;
     content: "";
@@ -46,21 +42,14 @@
     background: var(--white-color);
     right: 0;
     top: 0;
-    opacity: 0.3; /* Сделал линию чуть прозрачнее для аккуратности */
 }
 
 .header__top-item:last-child::before {
     display: none;
 }
 
-/* Адаптив для контейнера контролов */
-@media only screen and (max-width: 991px) {
-    .header__top-controls {
-        padding: 5px 20px;
-    }
-}
 
-/* --- Buttons & Switchers --- */
+
 
 .header__top-btn {
     background: none;
@@ -83,11 +72,10 @@
 .header__top-icon {
     vertical-align: middle;
     margin-right: 3px;
-    width: 16px; /* Фиксируем размер иконок */
+    width: 16px; 
     height: auto;
 }
 
-/* --- Dropdowns Common --- */
 
 .header__top-dropdown {
     position: absolute;
@@ -98,7 +86,6 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     
-    /* Скрытие по умолчанию */
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -109,14 +96,12 @@
     margin: 0;
 }
 
-/* Показ при наведении на родительский элемент (.header__top-item) */
 .header__top-item:hover .header__top-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-/* --- Dropdown Links --- */
 
 .header__top-dropdown-item {
     display: block;
@@ -131,18 +116,13 @@
     transition: background-color 0.2s, color 0.2s;
 }
 
-/* Ховер эффект для ссылок */
 .header__top-link:hover {
     background-color: #f5f5f5;
     color: var(--secondary-color);
 }
 
 
-/* ------------------------------- */
 
-/* =========================================
-   HEADER BOTTOM STYLES
-   ========================================= */
 
 .header__bottom-container {
     display: flex;
@@ -153,7 +133,7 @@
 
 .header__bottom {
     background-color: var(--white-color);
-    box-shadow: 0 3px 8px rgba(71, 71, 71, .16); /* Тень как в оригинале */
+    box-shadow: 0 3px 8px rgba(71, 71, 71, .16); 
 }
 
 
@@ -163,7 +143,6 @@
     display: block;
 }
 
-/* --- Navigation --- */
 .header__bottom-nav-list {
     list-style: none;
     margin: 0;
@@ -196,7 +175,6 @@
     margin-left: 3px;
 }
 
-/* --- Dropdown Menu --- */
 .header__bottom-dropdown {
     position: absolute;
     z-index: 9;
@@ -233,7 +211,6 @@
     color: var(--secondary-color);
 }
 
-/* --- Mega Menu --- */
 .header__bottom-nav-item--mega {
     position: relative;
 }
@@ -298,7 +275,6 @@
     color: var(--secondary-color);
 }
 
-/* --- Actions (Icons) --- */
 .header__bottom-actions-list {
     list-style: none;
     display: flex;
@@ -342,7 +318,6 @@
     fill: currentColor;
 }
 
-/* Счетчик товаров */
 .header__bottom-count {
     position: absolute;
     right: -14px;
@@ -362,7 +337,6 @@
     right: -7px;
 }
 
-/* --- Mobile Toggle --- */
 .header__bottom-mobile-toggle {
     display: none;
 }
