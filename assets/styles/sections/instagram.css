@@ -1,0 +1,15 @@
+.instagram {
+    position: relative;
+}
+
+.instagram__swiper-button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+  
+
+.instagram:hover .instagram__swiper-button {
+    opacity: 1;
+    visibility: visible;
+}

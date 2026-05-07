@@ -1,0 +1,380 @@
+/* =========================================
+   HEADER TOP STYLES
+   ========================================= */
+
+.header__top {
+    background: var(--primary-color);
+    padding-block: 10px;
+}
+
+.header__top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__top-text {
+    color: var(--white-color);
+    margin: 0;
+    font-size: 14px; /* Добавил размер шрифта для текста акции */
+}
+
+.header__top-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Items & Separators --- */
+
+.header__top-item {
+    position: relative;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+
+.header__top-item:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/* Линия разделитель */
+.header__top-item::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: var(--white-color);
+    right: 0;
+    top: 0;
+    opacity: 0.3; /* Сделал линию чуть прозрачнее для аккуратности */
+}
+
+.header__top-item:last-child::before {
+    display: none;
+}
+
+/* Адаптив для контейнера контролов */
+@media only screen and (max-width: 991px) {
+    .header__top-controls {
+        padding: 5px 20px;
+    }
+}
+
+/* --- Buttons & Switchers --- */
+
+.header__top-btn {
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    transition: opacity 0.3s;
+}
+
+.header__top-btn:hover {
+    opacity: 0.8;
+}
+
+.header__top-icon {
+    vertical-align: middle;
+    margin-right: 3px;
+    width: 16px; /* Фиксируем размер иконок */
+    height: auto;
+}
+
+/* --- Dropdowns Common --- */
+
+.header__top-dropdown {
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 0;
+    background: var(--white-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    
+    /* Скрытие по умолчанию */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* Показ при наведении на родительский элемент (.header__top-item) */
+.header__top-item:hover .header__top-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- Dropdown Links --- */
+
+.header__top-dropdown-item {
+    display: block;
+}
+
+.header__top-link {
+    display: block;
+    font-size: 14px;
+    padding: 8px 15px;
+    color: var(--text-gray-color);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Ховер эффект для ссылок */
+.header__top-link:hover {
+    background-color: #f5f5f5;
+    color: var(--secondary-color);
+}
+
+
+/* ------------------------------- */
+
+/* =========================================
+   HEADER BOTTOM STYLES
+   ========================================= */
+
+.header__bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+}
+
+.header__bottom {
+    background-color: var(--white-color);
+    box-shadow: 0 3px 8px rgba(71, 71, 71, .16); /* Тень как в оригинале */
+}
+
+
+.header__bottom-logo {
+    max-height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* --- Navigation --- */
+.header__bottom-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.header__bottom-nav-item {
+    position: relative;
+}
+
+
+.header__bottom-nav-link {
+    font-family: var(--josefin-sans);
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--text-gray-color);
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+
+.header__bottom-nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.header__bottom-nav-icon {
+    margin-left: 3px;
+}
+
+/* --- Dropdown Menu --- */
+.header__bottom-dropdown {
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    width: 220px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 20px;
+    list-style: none;
+    opacity: 0;
+    background-color: var(--white-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.header__bottom-nav-item:hover .header__bottom-dropdown {
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
+}
+
+.header__bottom-dropdown-link {
+    font-size: 15px;
+    display: block;
+    padding: 10px 0;
+    color: var(--text-gray-color);
+    text-decoration: none;
+}
+
+.header__bottom-dropdown-link:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Mega Menu --- */
+.header__bottom-nav-item--mega {
+    position: relative;
+}
+
+.header__bottom-mega-menu {
+    position: absolute;
+    display: flex;
+    z-index: 9;
+    top: 100%;
+    display: flex;
+    margin: 0;
+    width: fit-content;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 25px;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--white-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+}
+
+.header__bottom-nav-item--mega:hover .header__bottom-mega-menu {
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
+}
+
+.header__bottom-mega-column {
+    padding: 3px 15px;
+    width: 50%;
+}
+
+.header__bottom-mega-title {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    color: var(--primary-color);
+}
+
+.header__bottom-mega-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.header__bottom-mega-link {
+    font-size: 15px;
+    color: var(--text-gray-color);
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+}
+
+.header__bottom-mega-link:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Actions (Icons) --- */
+.header__bottom-actions-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.header__bottom-actions-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.header__bottom-actions-item:last-child {
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 575px) {
+    .header__bottom-actions-item {
+        margin-right: 10px;
+    }
+}
+
+.header__bottom-actions-btn {
+    color: var(--text-gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.header__bottom-actions-btn:hover {
+    color: var(--secondary-color);
+}
+
+.header__bottom-actions-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Счетчик товаров */
+.header__bottom-count {
+    position: absolute;
+    right: -14px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    background: var(--secondary-color);
+    text-align: center;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.header__bottom-count.wishlist {
+    right: -7px;
+}
+
+/* --- Mobile Toggle --- */
+.header__bottom-mobile-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .header__bottom-mobile-toggle {
+        display: block;
+    }
+    
+    .header__bottom-mobile-icon {
+        width: 32px;
+        height: 32px;
+        color: var(--primary-color);
+    }
+}

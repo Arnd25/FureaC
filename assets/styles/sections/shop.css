@@ -1,0 +1,86 @@
+.shop__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.shop__card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; 
+}
+
+/* --- АДАПТИВ ДЛЯ КАРТИНОК --- */
+.shop__card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ---------------------------- */
+
+.shop__card--mega {
+    grid-row: span 2;
+}
+
+.shop__card-info {
+    position: absolute;
+}
+
+.shop__card-title {
+    font-size: 28px;
+    position: relative;
+    line-height: 1.2;
+}
+
+.shop__card-title::before {
+    position: absolute;
+    content: "";
+    width: 104px;
+    height: 4px;
+    background: url(../../images/border-shape.webp);
+    bottom: -10px;
+    left: 0;
+}
+
+.shop__card-info--left {
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+}
+
+.shop__card-info--right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 35px;
+}
+
+.shop__card-info--center {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    width: 100%;
+}
+
+.shop__card-title--center::before {
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.shop__card-info--topLeft {
+    top: 20%;
+    left: 30px;
+}
+
+@media (max-width: 600px) {
+    .shop__list {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    
+
+}

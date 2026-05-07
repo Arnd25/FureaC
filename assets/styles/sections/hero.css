@@ -1,0 +1,170 @@
+/* =========================================
+   1. Основные настройки секции Hero
+   ========================================= */
+
+.hero {
+    position: relative; /* Важно для абсолютного позиционирования кнопок */
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero__container {
+    padding-block: 200px;
+}
+
+/* =========================================
+   2. Контент слайдера (Текст и Кнопки)
+   ========================================= */
+
+.hero__slider-alt {
+    position: relative;
+    padding-left: 70px;
+    color: var(--white-color);
+    margin-bottom: 15px; /* Добавлен отступ для красоты */
+}
+
+.hero__slider-title {
+    color: var(--white-color);
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 700;
+    margin-bottom: 20px; /* Добавлен отступ */
+}
+
+.hero__slider-desc {
+    color: var(--white-color);
+    font-weight: 300;
+    margin-bottom: 30px; /* Добавлен отступ */
+}
+
+/* Декоративная линия перед текстом */
+.hero__slider-alt::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 1px;
+    background: var(--white-color);
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Кнопка действия внутри слайда */
+.hero__slider-button {
+    border: none;
+    border-radius: 3px;
+    padding-inline: 25px;
+    height: 45px;
+    transition: var(--transition);
+}
+
+.hero__slider-button:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+.hero__swiper-button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+  
+
+.hero:hover .hero__swiper-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================================
+   4. Фоны слайдов
+   ========================================= */
+
+.hero-slider--1 {
+    background: url(../../images/home1-slider1.webp);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 767px) { 
+    .hero-slider--1 { background-position: 25%; } 
+}
+
+.hero-slider--2 { 
+    background-image: url(../../images/home1-slider2.webp);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero-slider--3 { 
+    background-image: url(../../images/home1-slider3.webp);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero-slider-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;    
+}
+
+/* Убираем декоративную линию в правом слайде, если нужно */
+.hero-slider-right .hero__slider-content .hero__slider-alt::before {
+    display: none;
+}
+
+/* Если в правом слайде нужно изменить отступ у заголовка из-за отсутствия линии */
+.hero-slider-right .hero__slider-alt {
+    padding-left: 0;
+}
+
+/* =========================================
+   5. Анимации контента
+   ========================================= */
+
+@-webkit-keyframes fadeInUp {
+    from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }
+    to { opacity: 1; -webkit-transform: none; transform: none; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }
+    to { opacity: 1; -webkit-transform: none; transform: none; }
+}
+
+.swiper-slide-active .hero__container > * {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.swiper-slide-active .hero__slider-alt { 
+    -webkit-animation-delay: .7s; 
+    animation-delay: .7s; 
+}
+
+.swiper-slide-active .hero__slider-title { 
+    -webkit-animation-delay: .3s; 
+    animation-delay: .3s; 
+}
+
+.swiper-slide-active .hero__slider-desc { 
+    -webkit-animation-delay: .9s; 
+    animation-delay: .9s; 
+}
+
+.swiper-slide-active .hero__slider-button { 
+    -webkit-animation-delay: 1s; 
+    animation-delay: 1s; 
+}

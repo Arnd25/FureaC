@@ -1,0 +1,96 @@
+.popular {
+    padding-block: 75px;
+}
+
+.popular-title {
+    text-align: center;
+}
+.popular__tabs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    place-self: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.popular__tab-item {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--josefin-sans);
+    padding-inline: 15px;
+}   
+
+.popular__content-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.popular__card {
+    border: solid var(--border-color) 1px;
+    transition: var(--transition);
+}
+
+.popular__card-alt {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.popular__card--color-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.popular__card--color {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: red;
+}
+
+.popular__card-title {
+    font-family: var(--josefin-sans);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popular__card-price {
+    font-family: var(--josefin-sans);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: red;
+}
+.popular__card-price span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.popular__card-button {
+    border: none;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.3s;
+    visibility: hidden;
+}
+
+.popular__card-button:hover {
+    background: var(--primary-color);
+}
+
+.popular__card:hover .popular__card-button {
+    visibility:visible;
+    opacity: 1;
+}
