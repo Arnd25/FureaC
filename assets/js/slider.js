@@ -1,6 +1,5 @@
 "use strict";
 
-// 1. Hero Slider
 const heroSwiper = new Swiper(".hero", {
   slidesPerView: 1,
   loop: true,
@@ -35,8 +34,18 @@ const instagramSwiper = new Swiper(".instagram", {
         },
     },
     navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+})
+
+const blogSwiper = new Swiper(".blog__swiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 })
 
