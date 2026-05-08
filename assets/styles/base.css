@@ -138,7 +138,7 @@ button, input[type=submit] {
     background: var(--primary-color);
 }
 
-.secondary-button {
+.button--secondary {
     border: none;
     background: var(--white-color);
     color: var(--primary-color);
@@ -152,7 +152,7 @@ button, input[type=submit] {
     transition: all 0.3s;
 }
 
-.secondary-button:hover {
+.button--secondary:hover {
     background: var(--secondary-color);
     border: transparent solid 1px;
     color: var(--white-color);
