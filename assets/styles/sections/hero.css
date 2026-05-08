@@ -1,9 +1,7 @@
-/* =========================================
-   1. Основные настройки секции Hero
-   ========================================= */
+
 
 .hero {
-    position: relative; /* Важно для абсолютного позиционирования кнопок */
+    position: relative; 
     overflow: hidden;
     width: 100%;
 }
@@ -12,15 +10,13 @@
     padding-block: 200px;
 }
 
-/* =========================================
-   2. Контент слайдера (Текст и Кнопки)
-   ========================================= */
+
 
 .hero__slider-alt {
     position: relative;
     padding-left: 70px;
     color: var(--white-color);
-    margin-bottom: 15px; /* Добавлен отступ для красоты */
+    margin-bottom: 15px; 
 }
 
 .hero__slider-title {
@@ -28,16 +24,15 @@
     font-size: 50px;
     line-height: 55px;
     font-weight: 700;
-    margin-bottom: 20px; /* Добавлен отступ */
+    margin-bottom: 20px; 
 }
 
 .hero__slider-desc {
     color: var(--white-color);
     font-weight: 300;
-    margin-bottom: 30px; /* Добавлен отступ */
+    margin-bottom: 30px; 
 }
 
-/* Декоративная линия перед текстом */
 .hero__slider-alt::before {
     position: absolute;
     content: "";
@@ -50,7 +45,6 @@
     transform: translateY(-50%);
 }
 
-/* Кнопка действия внутри слайда */
 .hero__slider-button {
     border: none;
     border-radius: 3px;
@@ -77,9 +71,6 @@
     visibility: visible;
 }
 
-/* =========================================
-   4. Фоны слайдов
-   ========================================= */
 
 .hero-slider--1 {
     background: url(../../images/home1-slider1.webp);
@@ -116,19 +107,15 @@
     text-align: center;    
 }
 
-/* Убираем декоративную линию в правом слайде, если нужно */
 .hero-slider-right .hero__slider-content .hero__slider-alt::before {
     display: none;
 }
 
-/* Если в правом слайде нужно изменить отступ у заголовка из-за отсутствия линии */
 .hero-slider-right .hero__slider-alt {
     padding-left: 0;
 }
 
-/* =========================================
-   5. Анимации контента
-   ========================================= */
+
 
 @-webkit-keyframes fadeInUp {
     from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }
