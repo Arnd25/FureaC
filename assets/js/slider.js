@@ -49,3 +49,10 @@ const blogSwiper = new Swiper(".blog__swiper", {
     },
 })
 
+const testimonial = new Swiper(".testimonial__swiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    
+})
+

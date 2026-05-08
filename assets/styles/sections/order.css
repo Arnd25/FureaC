@@ -1,0 +1,33 @@
+.order__container {
+    display: flex;
+    gap: 30px;
+}
+
+.order__card {
+    position: relative;
+    width: 100%;
+}
+
+.order__card-info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.order__card-title {
+    font-family: var(--josefin-sans);
+    font-size: 26px;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-bottom: 15px;
+}
+.order__card:hover .order__card-title {
+    color: var(--secondary-color);
+}
+.order__card-info--left {
+    left: 30px;
+}
+
+.order__card-info--right {
+    right: 30px;
+}

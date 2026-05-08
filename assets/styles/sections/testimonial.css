@@ -1,0 +1,34 @@
+.testimonial__container {
+    display: flex;
+    gap: 30px;
+    padding-block: 120px;
+    overflow-x: hidden;
+}
+.testimonial__swiper-wrapper {
+    width: 700px;
+}
+.testimonial-title {
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: solid var(--border-color) 1px;
+}
+
+.testimonial__swiper {
+    padding-block-start: 40px;
+    overflow-x: hidden;
+}
+
+.testimonial__slide-rate svg {
+    color: var(--yellow-color);
+}
+
+.testimonial__slide-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonial__slide-text {
+    display: flex;
+    flex-direction: column;
+}
