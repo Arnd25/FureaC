@@ -1,6 +1,7 @@
 .order__container {
     display: flex;
     gap: 30px;
+    padding-top: 120px !important;
 }
 
 .order__card {
@@ -31,3 +32,19 @@
 .order__card-info--right {
     right: 30px;
 }
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) {
+    .order__container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* Планшет */
+@media screen and (max-width: 768.98px) {
+    .order__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+/* телефон */
+@media screen and (max-width: 520.98px) {}

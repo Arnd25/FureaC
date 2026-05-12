@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 45px;
-    padding-block: 120px;
     overflow-x: hidden;
 }
 
@@ -45,6 +44,7 @@
     align-items: center;
     font-family: var(--josefin-sans);
     color: var(--primary-color);
+    white-space: nowrap;
 }
 
 .blog__slider-date {
@@ -54,6 +54,8 @@
     align-items: center;
     font-family: var(--josefin-sans);
     color: var(--primary-color);
+    white-space: nowrap;
+
 }
 
 .blog__slider-info:nth-child(1) svg {
@@ -94,4 +96,20 @@
 .blog__swiper .swiper-button-prev {
     left: 0;
 }
+
+
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) {  }
+/* Планшет */
+@media screen and (max-width: 768.98x) {  }
+/* телефон */
+@media screen and (max-width: 520.98px) { 
+    .blog__slider-info { 
+        flex-direction: column;
+        gap: 10px;
+    } 
+}
+
+
+
 

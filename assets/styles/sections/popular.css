@@ -94,3 +94,28 @@
     visibility:visible;
     opacity: 1;
 }
+
+
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) {
+    .popular__content-list {
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+}
+/* Планшет */
+@media screen and (max-width: 768.98px) {
+    .popular__content-list {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* телефон */
+@media screen and (max-width: 520.98px) {
+    .popular__content-list {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .popular__tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

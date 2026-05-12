@@ -74,11 +74,23 @@
     left: 30px;
 }
 
-@media (max-width: 600px) {
-    .shop__list {
-        grid-template-columns: 1fr; 
-        gap: 15px;
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) {
+    .shop__card-title {
+        font-size: 18px;
     }
-    
-
 }
+/* Планшет */
+@media screen and (max-width: 768.98px) {
+    .shop__list {
+        grid-template-columns: 1fr;
+    }
+    .shop__card-info--left {
+        left: 20px;
+    }
+    .shop__card-info--right {
+        right: 20px;
+    }
+}
+/* телефон */
+@media screen and (max-width: 520.98px) {}

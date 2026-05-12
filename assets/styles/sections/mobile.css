@@ -1,0 +1,143 @@
+
+.header__bottom-mobile-toggle {
+    display: none;
+    border: none;
+}
+
+.mobile__menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: var(--white-color);
+    width: 300px;
+    display: none;
+    transition: all 3s;
+}
+
+.mobile__menu-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    border-block-end: 1px solid var(--border-color);
+
+}
+
+.mobile__menu-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateX();
+  z-index: 98;
+}
+
+.mobile__menu-Button {
+    border: none;
+    background: transparent;
+}
+
+
+
+.mobile__nav-item {
+    border-block-end: 1px solid var(--border-color);
+}
+
+.mobile__nav-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    position: relative;
+    font-weight: 600;
+}
+
+
+
+
+
+
+.mobile__nav-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 16px;
+    height: 2px;
+    background: var(--black-color);
+    transform: translateY(-50%);
+    
+}
+
+.mobile__nav-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    width: 2px;
+    height: 16px;
+    background: var(--black-color);
+    transform: translateY(-50%);
+}
+
+.mobile__nav-item.active .mobile__nav-button::after {
+    opacity: 0;
+    display: none;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.mobile__nav-submenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.mobile__nav-item.active .mobile__nav-submenu {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+
+
+.mobile__submenu-item {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.3s ease;
+    padding: 10px 35px;
+    font-weight: 500;
+    border-block-start: var(--border-color) solid 1px;
+}
+
+.mobile__nav-item.active .mobile__submenu-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile__nav-link {
+    padding: 15px 20px;
+    font-weight: 500;
+}
+
+
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) {
+    
+}
+/* Планшет */
+@media screen and (max-width: 768.98px) {
+    .header__bottom-mobile-toggle {
+        display: block;
+    }
+}
+/* телефон */
+@media screen and (max-width: 520.98px) {}

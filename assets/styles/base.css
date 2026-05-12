@@ -28,12 +28,14 @@
     --body-font-weight: 400;
     --body-line-height: 25px;
     --headings-weight: 600;
-    --transition: all 0.3s ease 0s;
+    --transition: all 0.5s ease 0s;
     --container-fluid-offset: 190px;
 }
 
 
-
+section .container {
+    padding-block: 60px;
+}
 
 body, html {
     min-height: 100%;
@@ -91,7 +93,6 @@ p {
     font-size: 16px;
     line-height: 25px;
 }
-p:last-child { margin-bottom: 0; }
 
 a, button {
     display: inline-block;

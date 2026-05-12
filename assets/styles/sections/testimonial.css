@@ -32,3 +32,68 @@
     display: flex;
     flex-direction: column;
 }
+.testimonial__slide-text svg {
+    color: var(--light-color);
+}
+
+.testimonial__content {
+    position: relative;
+}
+
+.testimonial-pagination {
+   bottom: 30px !important;
+   transition: var(--transition);
+}
+
+.testimonial-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    transition: var(--transition);
+}
+
+.testimonial-pagination .swiper-pagination-bullet-active {
+    background: var(--secondary-color);
+    width: 14px;
+    height: 14px;
+}
+
+.testimonial__slide-profile-name {
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+.testimonial__slide-profile-job {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Ноутбук */
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) {
+    .testimonial__container {
+        flex-direction: column;
+    }
+    .testimonial__content {
+        order: 0;
+    }
+    .testimonial-img {
+        order: 1;
+    }
+    .testimonial__swiper {
+        padding-bottom: 120px;
+    }
+
+}
+/* Планшет */
+@media screen and (max-width: 768.98px) {
+        .testimonial__slide-top {
+        justify-content: center;
+    }
+    .testimonial__slide-text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+/* телефон */
+@media screen and (max-width: 520.98px) {}

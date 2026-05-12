@@ -1,6 +1,5 @@
 .subscribe__container {
     position: relative;
-    margin-block: 120px;
 }
 .subscribe__content {
     position: absolute;
@@ -56,3 +55,34 @@
     font-size: 13px;
     font-weight: 600;
 }
+
+
+
+/* Ноутбук */
+@media screen and (max-width: 1140.98px) { 
+
+}
+/* Планшет */
+@media screen and (max-width: 768.98px) { 
+        .subscribe__content {
+        right: 50%;
+        top: 20%;
+        text-align: center;
+        transform: translateX(50%);
+    } 
+    .subscribe__container {
+        margin-top: 0 !important;
+    }
+    .subscribe-title {
+        font-size: 20px;
+    }
+    .subscribe-img {
+        height: 250px;
+    }
+ }
+/* телефон */
+@media screen and (max-width: 520.98px) { 
+    .subscribe-form {
+        width: 250px;
+    }
+ }
